@@ -1,0 +1,42 @@
+<div class="container">
+
+    <h3>Quan ly danh muc san pham</h3>
+
+    <!-- form -->
+    <div class="form-group">
+        <label>Ma SP</label>
+        <input type="text" class="form-control" #maSP>
+    </div>
+    <div class="form-group">
+        <label>Ten SP</label>
+        <input type="text" class="form-control" #tenSP>
+    </div>
+    <div class="form-group">
+        <label for="pwd">Gia SP</label>
+        <input type="number" class="form-control" #giaSP>
+    </div>
+    <button type="submit" class="btn btn-primary"
+        (click)='btnThemSP(maSP.value,tenSP.value,giaSP.value)'>Submit</button>
+
+    <!-- table -->
+    <table class="table">
+        <thead class="bg-dark text-light">
+            <tr>
+                <th>STT</th>
+                <th>Ma</th>
+                <th>Ten</th>
+                <th>Gia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngIf='DSSP'>
+                <tr *ngFor='let item of DSSP; let stt = index' [ngClass]='{bgColor: (stt+1)%2==0}'>
+                    <td>{{stt + 1}}</td>
+                    <td>{{item.maSP}}</td>
+                    <td>{{item.tenSP}}</td>
+                    <td>{{item.giaSP}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

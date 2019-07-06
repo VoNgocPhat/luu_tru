@@ -1,0 +1,15 @@
+
+<h3>*ngIf</h3>
+<div *ngIf = 'status'>CyberSoft</div>
+<button (click) = 'hidden()'>Hidden</button>
+<button (click) = 'show()'>Show</button>
+
+<hr>
+<div *ngIf = 'statusLogin; else NoiDungElse'>
+    <button (click) = 'dangXuat()'>Dang Xuat</button>
+    <h2>xin chao</h2>
+</div>
+<ng-template #NoiDungElse>
+    <button (click) = 'dangNhap()'>Dang Nhap</button>
+    <h2>Vui long dang nhap!!!!!!!!!!!!!!!!!!!!!!!!!!!</h2>
+</ng-template>

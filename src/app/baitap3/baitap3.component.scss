@@ -1,0 +1,20 @@
+@mixin contents ($bg,$pd){
+    display: block;
+    background: $bg;
+    text-align: center;
+    padding: $pd 0;
+    color: white;
+}
+
+app-baitap3-header{
+    @include contents(red,20px);
+}
+app-baitap3-content{
+    @include contents(yellow,100px);
+}
+app-baitap3-sidebar{
+    @include contents(green,100px);
+}
+app-baitap3-footer{
+    @include contents(blue,20px);
+}

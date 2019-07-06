@@ -1,0 +1,38 @@
+@mixin content ($bg, $with){
+    background: $bg;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+    width: $with;
+}
+
+
+body{
+    margin: 0 !important;
+}
+
+.header{
+    background: red;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    display: block;
+}
+
+.contents{
+    display: flex;
+    .content{
+        @include content(yellow, 70%);
+    }
+    .sidebar{
+        @include content(green, 70%);
+    }
+}
+
+.footer{
+    background: blue;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    display: block;
+}

@@ -1,0 +1,8 @@
+<!-- Interpolation -->
+<div id='name'>{{name}}</div>
+
+<!-- Property Binding -->
+<input type="text" [value]="name" #thamso>
+
+<!-- Event Binding -->
+<button id="btn" class="btn btn-success" (click)='eventBinding(thamso.value)'>Button</button>
